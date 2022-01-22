@@ -9,7 +9,7 @@ cepas = input('Digite a cepa: ')
 out = 'Blast'+cepas+'.xml'
 cepas = cepas+'.fasta'
 
-cline = NcbiblastnCommandline(cmd = 'blastn', query = "C:/Users/raulS/Desktop/programas/Programa_Tobias/Regioes/All_regions.fasta", subject = cepas, outfmt = 5, out = out)
+cline = NcbiblastnCommandline(cmd = 'blastn', query = "C:/Users/raulS/Desktop/programas/Programa_Tobias/Regioes/All_regions.fasta", subject = cepas, outfmt = 5, out = out, reward = 1, penalty =-1, gapopen = 5, gapextend = 2)
 
 os.system((str(cline)))
 print(cline)
